@@ -1,0 +1,13 @@
+<h1>Publisher</h1>
+{%for i in object_list %}
+<a href="{%url 'publisher-detailview' pk=i.pk %}">{{i.name}}</a></br>
+{%endfor%}
+<h1>Authors</h1>
+{%for i in Authors%}
+{{i}}<br>
+{%endfor%}
+
+<h1>Books</h1>
+{%for i in Books%}
+{{i.title}}<br>
+{%endfor%}
