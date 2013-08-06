@@ -14,6 +14,7 @@ class Publisher(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class Author(models.Model):
     salutation = models.CharField(max_length=10)
     name = models.CharField(max_length=200)
@@ -22,6 +23,8 @@ class Author(models.Model):
 
     def __unicode__(self):
         return self.name
+    def get_absolute_url(self):
+        return reverse('author-detail', kwargs={'pk': self.pk})
 
 class Book(models.Model):
     title = models.CharField(max_length=100)

@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView
 from CBVTest.views import ThanksRedirectView
+from CBVTest.views import AuthorFormView,AuthorCreateView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -18,6 +19,9 @@ urlpatterns = patterns('',
         template_name='thanks.html'
         ),
         name='cbvthanks'),
+    url(r'authorform/$',AuthorFormView.as_view()),
+    url(r'authorcreate/$',AuthorCreateView.as_view()),
+   
 
 
     # Uncomment the admin/doc line below to enable admin documentation:
