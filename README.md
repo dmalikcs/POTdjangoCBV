@@ -23,7 +23,7 @@ Apps - CBVTest
     method:
 
         get_redirect_url(self,*args,**kwargs)
-*Generic edit view*
+*<b>Generic edit view</b>*
 * CreateView
 * updateView
 * deleteView
