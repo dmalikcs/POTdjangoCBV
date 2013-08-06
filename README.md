@@ -15,15 +15,15 @@ Apps - CBVTest
 
 * RedirectView:
 
-    attribute
-        query_string
-        url
-        permanent
+    attribute<br>
+        query_string</br>
+        url</br>
+        permanent</br>
 
     method:
 
-        get_redirect_url(self,*args,**kwargs)
+        get_redirect_url(self,*args,**kwargs)</br>
 *<b>Generic edit view</b>*
-* CreateView
-* updateView
-* deleteView
+* CreateView</br>
+* updateView</br>
+* deleteView</br>
