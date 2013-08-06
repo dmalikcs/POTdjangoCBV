@@ -7,8 +7,15 @@ Django class based view - POT
 
 
 Apps - CBVTest
-    * TemplateView 
-    * RedirectView 
-    * CreateView
-    * updateView
-    * deleteView
+
+* TemplateView 
+    TemplateView's attribute 
+    get_context_data() method
+* RedirectView:
+    attribute
+        url
+    method:
+        get_redirect_url(self,*args,**kwargs)
+* CreateView
+* updateView
+* deleteView
