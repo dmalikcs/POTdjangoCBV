@@ -1,0 +1,22 @@
+<center><h1>Author - ListView</h1></center>
+<table border='1'>
+{%for author in authors%}
+<tr>
+    <td>
+        {{author.pk}}
+    </td>
+    <td>
+        {{author.name}}
+    </td>
+    <td>
+        {{author.email}}    
+    </td>
+    <td><a href="{%url 'author-update' pk=author.pk%}">update</a></td>
+    <td><a href="{%url 'author-delete' pk=author.pk%}"><button>delete</button> </a></td>
+    <td><a href="{%url 'author-detail' pk=author.pk%}"><button>Detail</button></a></td>
+
+
+</tr>
+
+{%endfor%}
+</table>

@@ -31,3 +31,12 @@ class Book(models.Model):
     authors = models.ManyToManyField('Author')
     publisher = models.ForeignKey(Publisher)
     publication_date = models.DateField()
+
+
+class Article(models.Model):
+    title=models.CharField(max_length=30)
+    pub_date=models.DateField()
+    def __unicode__(self):
+        return self.title
+    #def get_absolute_url(self):
+    #   return reverse('article-detail', kwargs={'pk': self.pk})

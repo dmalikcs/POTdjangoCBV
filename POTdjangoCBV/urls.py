@@ -27,4 +27,5 @@ urlpatterns = patterns('',
     url(r'^create/',PersonInfoCreateView.as_view()),
     url(r'^update/(?P<pk>\d+)/$',PersonInfoUpdateView.as_view()),
     url(r'^books/', include('Books.urls')),
+    url(r'^cbv/', include('CBVTest.urls')),
     )
