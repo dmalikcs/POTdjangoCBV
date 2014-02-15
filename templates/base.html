@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+            <title> Krunk Systems </title>
+            <link rel = "stylesheet" href = "/static/css/bootstrap.css">
+            <link rel = "stylesheet" href = "/static/font-awesome/css/font-awesome.css">
+            <link rel = "stylesheet" href = "/static/css/bootstrap-responsive.css">
+            {%block customcss %}
+            <link rel = "stylesheet" href = "/static/css/krunk_home.css">
+            <link rel = "stylesheet" href = "/static/css/base.css">
+            <link rel = "stylesheet" href = "/static/css/krunk_abtus_test.css">
+            <link rel = "stylesheet" href = "/static/css/krunk_services.css">
+            <!-- <link rel = "stylesheet" href = "/static/css/footer.css">-->
+            <link rel = "stylesheet" href = "/static/css/krunk_contact.css">
+            <!--<link href="http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">-->
+            {%endblock customcss %}
+    </head>
+    <body>
+        {%block templates%}
+        {%include "templates.html"%}
+        {%endblock templates%}
+        {%block menu%}
+        <section>
+        <ul class = "nav nav-stacked menuitem " id="menu">
+            <div class = "span2">
+                <li> <a href = "#home" class="txtcol"><img src="/static/images/homepg_icon_100.png" id="homebtn" data-trigger="hover" data-toggle="tooltip" data-placement="left" title="Home" > </a> </li> <br>
+                <li> <a href = "#about" class="txtcol"><img src="/static/images/aboutpg_icon_100.png" id="abtbtn" data-trigger="hover" data-toggle="tooltip" data-placement="left" title="About" > </a> </li> <br>
+                <li> <a href = "#services" class="txtcol"><img src="/static/images/servicespg_icon_100.png" id="servicebtn" data-trigger="hover" data-toggle="tooltip" data-placement="left" title="Services" ></a> </li><br>
+              <li> <a href = "#contact" class="txtcol"><img src="/static/images/contactpg_icon_100.png" id="contactbtn" data-trigger="hover" data-toggle="tooltip" data-placement="left" title="Contact" ></a> </li><br>
+                <!--    <li> <a href = "#blog" class="txtcol"><h5> Blog </h5> </a> </li> -->
+              <!--   <li> <a href = "#projects" class="txtcol"><img src="/static/images/mauve_cir.jpg" id="projbtn" data-trigger="hover" data-toggle="tooltip" data-placement="left" title="Projects" > </a> </li><br>
+                <li> <a href = "#team" class="txtcol"><h5> The Team </h5> </a> </li> -->
+              <!-- <li> <a href = "#footer" class="txtcol"><img src="/static/images/mauve_cir.jpg" id="footerbtn" data-trigger="hover" data-toggle="tooltip" data-placement="left" title="All-in-One" ></a> </li> -->
+                <!--<li> <a href = "#jobs" class="txtcol"><h5> Jobs </h5></a> </li>-->
+            </div>
+        </ul>
+        </section>
+        {%endblock menu%}
+        {%block content %}
+        {%endblock content%}
+        {%block script%}
+            <script type="text/javascript" src="/static/js/jquery.js"></script>
+            <script type="text/javascript">
+                     $(window).load(function(){
+                            var width = $(window).width();
+                            var height = $(window).height();
+                            console.log(width);
+                            console.log(height);
+                            $('#home').css({'height':height,'width':width});
+                            $('.item img').css({'height':height,'width':width});
+                            $('#about').css({'height':height,'width':width});
+                            $('#services').css({'height':height,'width':width});
+                            $('#contact').css({'height':height,'width':width});
+                           /* $('#products').css({'height':height,'width':width});
+                             $('#footer').css({'height':height,'width':width});
+                             $('#about').click(function(){
+                                $('.container').css({'height':height,'width':width})
+                                });
+                            $('#services').click(function(){
+                                $('.container').css({'height':height,'width':width})
+                                });
+                            $('#projects').click(function(){
+                                $('.container').css({'height':height,'width':width})
+                                });
+                            $('#contact').click(function(){
+                                $('.container').css({'height':height,'width':width})
+                                });*/
+                        });
+             </script>            
+            <script type="text/javascript" src="/static/js/underscore.js"></script>
+            <script type="text/javascript" src="/static/js/backbone.js"></script>
+            <script type="text/javascript" src="/static/js/models.js"></script>
+            <script type="text/javascript" src="/static/js/views.js"></script>
+            <script type="text/javascript" src="/static/js/routes.js"></script>
+            <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+            <script type="text/javascript">$('.carousel').carousel({interval:3000});</script> 
+            <script type="text/javascript" src="/static/js/bootstrap-tooltip.js"> </script>
+            <script type = "text/javascript">
+                        $('#homebtn').tooltip();
+                        $('#abtbtn').tooltip();
+                        $('#servicebtn').tooltip();
+                        $('#projbtn').tooltip();
+                        $('#contactbtn').tooltip();
+                        $('#footerbtn').tooltip();
+             </script>
+            <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+            <script type="text/javascript" src="/static/js/nbw-parallax.js"></script>
+            <script type="text/javascript" src="/static/js/jquery.localscroll-1.2.7-min.js"></script>
+            <script type="text/javascript" src="/static/js/jquery.scrollTo-1.4.2-min.js"></script>
+            <script type="text/javascript" src="/static/js/jquery.inview.js"></script>
+            <script type = "text/javascript">
+                    $(document).ready(function()
+                    {
+                    $('#menu').localScroll();
+                    });
+                    $(document).bind("ajaxSend", function(){
+                    //  $("#loading").show();
+                    console.log("ajaxSend started");
+                    }).bind("ajaxComplete", function(){
+                    //$("#loading").hide();
+                    console.log("ajaxCompleted started");
+                    }).bind("ajaxSuccess",function(){
+                    console.log("Successfully completed"); 
+                    });
+                     /* $(function () {
+                        $('#myTab a:last').tab('show');
+                    })*/
+                </script>
+                {%endblock script%}
+    </body>
+    </html>
